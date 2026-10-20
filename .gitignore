@@ -1,0 +1,38 @@
+# ===== 数据（体积大，不入库；用 checksums 记录完整性） =====
+data/raw/*
+!data/raw/checksums-sha256.txt
+data/interim/
+data/processed/
+
+# ===== 工具与临时目录 =====
+.tmp/
+.tools/
+.npm-cache/
+.acl-recovery/
+
+# ===== 日志 =====
+logs/
+*.log
+
+# ===== Java / Maven =====
+target/
+*.class
+*.jar
+
+# ===== 前端 =====
+node_modules/
+dist/
+.vite/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ===== IDE / 系统 =====
+.idea/
+.vscode/
+*.iml
+Thumbs.db
+Desktop.ini

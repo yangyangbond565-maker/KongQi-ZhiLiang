@@ -22,6 +22,7 @@ HDFS 存储 → Hive 建表 → Spark SQL 统计 → MySQL 落库 → Spring Boo
 | 后端接口 | 4 个只读接口：概览、站点对比、月度趋势、小时分布 |
 | 可视化大屏 | 指标卡 + 站点柱状图 + 月度折线 + 24 小时折线，可切换污染物 |
 | 统计查询页 | 站点 / 月度 / 小时三张表，带分页，可切换污染物 |
+| 独立分析图 | Python + Matplotlib 生成 6 张静态图（站点、月度、小时、缺失率、季节、相关性），并自动核对关键数值 |
 
 ## 3. 技术栈
 
@@ -71,6 +72,9 @@ D:\官方工作区\
 ├── scripts\
 │   ├── data_quality_check.py
 │   └── load_ads_to_mysql.py
+├── analysis\
+│   ├── matplotlib_charts.py   6 张分析图脚本（可重复运行）
+│   └── output\                生成的 PNG 与底表 CSV
 ├── data\                    原始数据与中间结果（已 gitignore）
 ├── docs\                    各阶段记录
 └── README.md
